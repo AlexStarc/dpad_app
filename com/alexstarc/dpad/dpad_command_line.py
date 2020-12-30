@@ -9,6 +9,9 @@ printable = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ' \
 
 
 def main(screen):
+    curses.use_default_colors()
+    for i in range(0, curses.COLORS):
+        curses.init_pair(i, i, -1)
     curses.curs_set(1)
     curses.noecho()
 
@@ -19,6 +22,7 @@ def main(screen):
         curses.echo()
         if c == 113:
             screen.addstr('Abort!\n')
+            time.sleep(1)
             break
         if c == 114:
             screen.addstr('Restart adb\n')
