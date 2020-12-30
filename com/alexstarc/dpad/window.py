@@ -1,7 +1,5 @@
-import pkgutil
-import tkinter
 from tkinter import *
-from com.yandex.astarch.dpad.adb_commands import send_adb_keyevent
+from com.alexstarc.dpad.adb_commands import send_adb_keyevent
 
 
 def send_adb_left():

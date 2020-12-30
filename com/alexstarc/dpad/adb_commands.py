@@ -30,3 +30,11 @@ def send_adb_keyevent(key):
         execute_eventkey_command(signer, key)
 
     print("Pressed key " + str(key))
+
+
+def execute_adb_cmd_restart():
+    os.system("adb kill-server && adb start-server")
+
+
+def execute_adb_cmd_keyevent(key):
+    os.system("adb shell input keyevent " + str(key))
